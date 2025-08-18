@@ -59,7 +59,7 @@ body {
 .btn-veja-mais:hover {
   background: #2980b9;
 }
-* Responsividade */
+/* Responsividade */
 
 @media (max-width: 768px) {
   nav {

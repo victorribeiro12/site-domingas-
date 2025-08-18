@@ -6,6 +6,7 @@
   --text-color: var(--dark);
   --card-bg: var(--light-gray);
   --accent-color: #504f4f; /* Azul escolar */
+}
 * {
   margin: 0;
   padding: 0;
@@ -68,7 +69,7 @@ header {
   flex-wrap: wrap;
   transition: background-color 0.4s ease;
   text-align: center;
-  
+  border-radius: 0px;
 }
 
 /* Botão Hamburguer */
@@ -182,7 +183,7 @@ header h1 {
   color: var(--accent-color);
   border: none;
   padding: 0.4rem 0.6rem;
-  border-radius: 6px;
+  border-radius: 0px;
   cursor: pointer;
   font-size: 1.2rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -376,22 +377,36 @@ body.dark-mode footer {
   background-color: var(--accent-color);
 }
 
-/* ===== Responsividade ===== */
+/* ===== Responsividade Ajustada ===== */
 @media (max-width: 1024px) {
-  header, nav, footer { padding: 1rem; }
-  header h1 { font-size: 1.5rem; }
-  .eventos-container { grid-template-columns: repeat(2, 1fr); }
+  header, nav, footer { 
+    padding: 0.8rem; 
+  }
+  header h1 { font-size: 1.4rem; }
+  main p { margin-bottom: 0.7rem; } /* margens menores para textos */
+  .eventos-container { grid-template-columns: repeat(2, 1fr); gap: 15px; }
   .carrossel-item img { height: 250px; }
+  footer { padding: 1.5rem 0.8rem; }
 }
 
 @media (max-width: 768px) {
-  header { flex-direction: column; gap: 1rem; }
-  .eventos-container { grid-template-columns: 1fr; }
+  header { 
+    flex-direction: column; 
+    gap: 0.8rem; 
+    padding: 0.6rem; 
+  }
+  header h1 { font-size: 1.3rem; }
+  main p { margin-bottom: 0.6rem; }
+  .eventos-container { grid-template-columns: 1fr; gap: 12px; }
   .carrossel-item img { height: 200px; }
+  footer { padding: 1.2rem 0.6rem; }
 }
 
 @media (max-width: 480px) {
-  header h1 { font-size: 1.3rem; }
-  .eventos-container { grid-template-columns: 1fr; gap: 12px; }
+  header { padding: 0.5rem; }
+  header h1 { font-size: 1.2rem; }
+  main p { margin-bottom: 0.5rem; }
+  .eventos-container { grid-template-columns: 1fr; gap: 10px; }
   .carrossel-item img { height: 150px; }
+  footer { padding: 1rem 0.5rem; }
 }

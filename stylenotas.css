@@ -1,0 +1,127 @@
+/* ===== Variáveis de cores ===== */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5f5f5;
+    --text-color: #4e4e4e;
+    --bg-color: #ffffff;
+    --btn-color: #4a90e2;
+    --btn-hover: #357ABD;
+}
+
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Dark mode ===== */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+.class-card{
+    border: #fff2f2;
+    border-style: groove;
+    
+}
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* ===== Imagem ===== */
+img {
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Parágrafo ===== */
+p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* ===== Seção do botão ===== */
+section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+a.btn-veja-mais {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--btn-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+a.btn-veja-mais:hover {
+    background-color: var(--btn-hover);
+    transform: scale(1.05);
+}
+
+/* ===== Botão de dark mode ===== */
+#toggle-dark {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Alterado de left para right */
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+#toggle-dark:hover {
+    background: transparent;
+    transform: scale(1.1);
+}
+
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    img {
+        max-width: 90%;
+    }
+}
