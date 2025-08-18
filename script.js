@@ -19,6 +19,7 @@ toggleButton.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
+
 // Carrossel
 const prevBtn = document.querySelector('.carrossel-btn.prev');
 const nextBtn = document.querySelector('.carrossel-btn.next');
@@ -46,4 +47,24 @@ prevBtn.addEventListener('click', () => {
 });
 
 // Ajusta carrossel ao redimensionar a tela
+
+//navbar//
 window.addEventListener('resize', updateCarousel);
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  menu.classList.toggle("active");
+});
+
+// Destacar item ativo
+document.querySelectorAll(".menu a").forEach(link => {
+  link.addEventListener("click", e => {
+    document.querySelectorAll(".menu a").forEach(l => l.classList.remove("active"));
+    e.target.classList.add("active");
+
+    menuToggle.classList.remove("active");
+    menu.classList.remove("active");
+  });
+});
