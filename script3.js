@@ -19,50 +19,25 @@ toggleButton.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
-// JavaScript para carrossel automático
-const carrosselContainer = document.querySelector('.carrossel-container');
-const carrosselItems = document.querySelectorAll('.carrossel-item');
-const prevBtn = document.querySelector('.carrossel-btn.prev');
-const nextBtn = document.querySelector('.carrossel-btn.next');
-
-let index = 0;
-const total = carrosselItems.length;
-
-// Função para atualizar o carrossel
-function updateCarrossel() {
-  carrosselContainer.style.transform = `translateX(-${index * 100}%)`;
-}
-
-// Botões de navegação
-prevBtn.addEventListener('click', () => {
-  index = (index - 1 + total) % total;
-  updateCarrossel();
-});
-
-nextBtn.addEventListener('click', () => {
-  index = (index + 1) % total;
-  updateCarrossel();
-});
-
-// Carrossel automático a cada 3 segundos
-setInterval(() => {
-  index = (index + 1) % total;
-  updateCarrossel();
-}, 3000); // 3000ms = 3 segundos
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
+// Função para abrir/fechar o menu hamburguer
 menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active");
-  menu.classList.toggle("active");
+  menuToggle.classList.toggle("active"); // animação do X
+  menu.classList.toggle("active");       // mostra/esconde o menu
 });
 
-// Destacar item ativo
+// Destacar item ativo quando clicado
 document.querySelectorAll(".menu a").forEach(link => {
   link.addEventListener("click", e => {
+    // Remove a classe active de todos os links
     document.querySelectorAll(".menu a").forEach(l => l.classList.remove("active"));
+    
+    // Adiciona active ao link clicado
     e.target.classList.add("active");
 
+    // Fecha o menu se estiver aberto
     menuToggle.classList.remove("active");
     menu.classList.remove("active");
   });

@@ -199,27 +199,46 @@ header .brasao-domingas img {
 header h1 {
   font-size: 1.8rem;
   flex: 1;
+  margin-right: 75rem;
 }
 
+
+/* Dark Mode ajuste extra */
+body.dark-mode .theme-btn {
+  background-color: var(--section-bg); /* fundo escuro */
+  color: var(--accent-color);
+}
 .header-buttons {
-  margin-left: auto; /* joga o botão para a direita */
   display: flex;
   gap: 0.5rem;
+  margin-left: auto; /* força os botões para a direita */
+}
+.header-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+
+  order: 2; /* joga o bloco para o fim do flex container */
 }
 
 .header-buttons button {
-  background-color: var(--white);
+  background-color: transparent; /* acompanha o tema */
   color: var(--accent-color);
   border: none;
   padding: 0.4rem 0.6rem;
-  border-radius: 0px;
+  border-radius: 50%; /* deixa bem arredondado */
   cursor: pointer;
   font-size: 1.2rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 40px;   /* largura fixa para ficar redondinho */
+  height: 40px;  /* altura fixa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-buttons button:hover {
-  background-color: #ddd;
+  background-color: transparent;
   transform: scale(1.05);
 }
 
@@ -428,26 +447,30 @@ body.dark-mode footer {
   background-color: var(--accent-color);
 }
 
-/*
- * Base Responsividade: A maioria dos elementos já são fluidos.
- * Apenas ajustes finos são necessários para tamanhos de tela específicos.
- */
+/*/* ===== Responsividade Refinada ===== */
 
-/* Tablets e Telas Maiores (Horizontal) */
+/* Tablets grandes / Horizontal (<=1024px) */
 @media (max-width: 1024px) {
-    header,
-    nav,
-    footer {
-        padding: 0.8rem;
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem 1.5rem;
+        text-align: center;
     }
 
     header h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        margin-right: auto; /* garante alinhamento correto */
     }
 
-    main p {
-        margin-bottom: 0.7rem;
-    } /* margens menores para textos */
+    .header-buttons {
+        gap: 0.4rem;
+    }
+
+    main section {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
 
     .eventos-container {
         grid-template-columns: repeat(2, 1fr);
@@ -458,25 +481,39 @@ body.dark-mode footer {
         height: 250px;
     }
 
+    .botoes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+    }
+
     footer {
-        padding: 1.5rem 0.8rem;
+        padding: 1.5rem 1rem;
     }
 }
 
-/* Tablets e Celulares (Vertical) */
+/* Tablets médios e celulares maiores (<=768px) */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        gap: 0.8rem;
-        padding: 0.6rem;
+        align-items: center;
+        padding: 0.8rem 1rem;
     }
 
     header h1 {
         font-size: 1.3rem;
+        margin-right: 0;
+        text-align: center;
     }
 
-    main p {
-        margin-bottom: 0.6rem;
+    .header-buttons {
+        justify-content: center;
+    }
+
+    main section {
+        padding: 1rem;
+        margin: 1rem auto;
     }
 
     .eventos-container {
@@ -488,32 +525,36 @@ body.dark-mode footer {
         height: 200px;
     }
 
+    .botoes a.btn-Provas-ENEM,
+    .botoes a.bnt-cefet-if {
+        width: 90%;  /* ocupam quase toda a largura em mobile */
+        max-width: 300px;
+        padding: 0.7rem 1rem;
+    }
+
     footer {
-        padding: 1.2rem 0.6rem;
+        padding: 1.2rem 0.8rem;
     }
 }
 
-/* Celulares Menores */
+/* Celulares pequenos / portrait (<=480px) */
 @media (max-width: 480px) {
-    header {
-        padding: 0.5rem;
-    }
-
     header h1 {
         font-size: 1.2rem;
     }
 
-    main p {
-        margin-bottom: 0.5rem;
-    }
-
-    .eventos-container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
     .carrossel-item img {
         height: 150px;
+    }
+
+    .botoes a.btn-Provas-ENEM,
+    .botoes a.bnt-cefet-if {
+        width: 95%;
+        padding: 0.6rem 0.8rem;
+    }
+
+    main section {
+        padding: 0.8rem 0.5rem;
     }
 
     footer {

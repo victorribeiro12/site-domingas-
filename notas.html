@@ -1,17 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-BR">
+<head>                                                                  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="stylenotas.css"></head>
-<body>
-    <button id="toggle-dark">☀️</button>
+    <title>Domingas</title>
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+<body>                        
+    <!-- Cabeçalho -->
+    <header>
+  <div class="brasao-domingas">
+    <img src="" alt="Brasão" width="" height="">
+  </div>
+
+  <h1>Domingas Maria de Almeida</h1>
+<div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Botões do lado direito -->
+  <div class="header-buttons">
+    <button id="darkModeToggle">🌙</button>    
+  </div>
+
+</header>
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="https://www.youtube.com/channel/UCdZRoqjS3WBEoql2WsJ4v8Q">Youtube</a></li>
+        <li><a href="jornalescolar.html">Jornal</a></li>
+        <li><a href="notas.html">Provas / ENEM - CEFET - IF</a></li>
+      </ul>
+    </nav>
+    </header>
+    <!-- Barra de navegação -->
+
+    <nav>
+      <div class="nav-buttons">
+
+<!-- CARROSSEL -->
+<div class="carrossel">
+  <div class="carrossel-container">
+    <div class="carrossel-item"><img src="https://picsum.photos/id/1015/1200/400" alt="Imagem 1"></div>
+    <div class="carrossel-item"><img src="https://picsum.photos/id/1016/1200/400" alt="Imagem 2"></div>
+    <div class="carrossel-item"><img src="https://picsum.photos/id/1018/1200/400" alt="Imagem 3"></div>
+    <div class="carrossel-item"><img src="https://picsum.photos/id/1019/1200/400" alt="Imagem 4"></div>
+    <div class="carrossel-item"><img src="https://picsum.photos/id/1020/1200/400" alt="Imagem 5"></div>
+  </div>
+  <button class="carrossel-btn prev">&#10094;</button>
+  <button class="carrossel-btn next">&#10095;</button>
+</div>
+    </nav>
+    <!-- Conteúdo principal -->
+    <main>
         
-    <section>
-      <div class="card">
-  <h1>Notas do ENEM-CEFET-IF</h1>
-    <img src="Captura de tela 2025-08-17 224131.png" alt="Imagem1">
+            <main>
+  <!-- Seção História da Escola -->
+  <section id="historia">
+  <h1>Notas do ENEM CEFET-IF</h1>
     <p>Bem-vindo à página oficial de acompanhamento das notas do ENEM da Escola Estadual Domingas Maria de Almeida.
 
     Este espaço foi criado especialmente para que nossos alunos possam consultar seus resultados de forma prática e organizada. Mais do que números, essas notas representam o esforço, a dedicação e o aprendizado de cada um de vocês ao longo da caminhada escolar.
@@ -19,11 +67,14 @@
     Lembrem-se: o ENEM não é apenas uma prova, mas uma porta de entrada para novas oportunidades. Use seus resultados como motivação para continuar estudando, evoluindo e alcançando seus objetivos. Cada passo é importante no caminho para o futuro que vocês desejam construir.
 
     Estamos aqui para apoiar vocês em todas as etapas dessa jornada! 🚀</p>
+     <div class="botoes">
+    <button><a href="https://drive.google.com/drive/folders/10E5hPZqCU7V21iJf1ngtkf_J2M4Nh8es" class="btn-Provas-ENEM">Provas ENEM</a></button>
+
+    <button><a href="https://drive.google.com/drive/folders/17B8JACQwFw6nr3ePuintCDdB9YFRvlOc" class="bnt-cefet-if">Provas CEFET-IF</a></button>
+    </div>
       </div>
     </section>
-    <section>
-    <a href="" class="btn-veja-mais">Veja mais</a>
-    </section>
+    
 </body>
 <script src="script2.js"></script>
 </html>
