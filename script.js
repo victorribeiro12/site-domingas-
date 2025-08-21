@@ -68,3 +68,4 @@ document.querySelectorAll(".menu a").forEach(link => {
     menu.classList.remove("active");
   });
 });
+

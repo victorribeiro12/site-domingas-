@@ -44,11 +44,11 @@ nextBtn.addEventListener('click', () => {
   updateCarrossel();
 });
 
-// Carrossel automático a cada 3 segundos
+// Carrossel automático a cada 2 segundos
 setInterval(() => {
   index = (index + 1) % total;
   updateCarrossel();
-}, 3000); // 3000ms = 3 segundos
+}, 2000); // 2000ms = 2 segundos
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
